@@ -1,0 +1,6 @@
+FROM golang:alpine
+
+WORKDIR /go/src/app
+COPY /RestAPI/api.go .
+RUN go build -o webserver .
+CMD ["./webserver"]
